@@ -32,7 +32,7 @@ public class ResultFragment extends Fragment {
         replay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_resultFragment_to_gameFragment);
+//                Navigation.findNavController(view).navigate(R.id.action_resultFragment_to_gameFragment);
             }
         });
 

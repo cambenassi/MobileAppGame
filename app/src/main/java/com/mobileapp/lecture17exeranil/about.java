@@ -11,22 +11,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class WinGame extends Fragment {
-
-
-
+public class about extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_win_game, container, false);
-        Button startOver = view.findViewById(R.id.startOver);
+        View view = inflater.inflate(R.layout.fragment_about, container, false);
+        Button main = view.findViewById(R.id.main);
 
-        startOver.setOnClickListener(new View.OnClickListener() {
+        main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavController navController = Navigation.findNavController(view);
-                navController.navigate(R.id.action_winGame_to_startpage);
+                navController.navigate(R.id.action_about2_to_startpage);
             }
         });
 

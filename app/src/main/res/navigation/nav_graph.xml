@@ -3,24 +3,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/gameFragment">
-
+    app:startDestination="@id/startpage">
     <fragment
-        android:id="@+id/gameFragment"
-        android:name="com.mobileapp.lecture17exeranil.GameFragment"
-        android:label="fragment_game"
-        tools:layout="@layout/fragment_game" >
+        android:id="@+id/startpage"
+        android:name="com.mobileapp.lecture17exeranil.startpage"
+        android:label="fragment_startpage"
+        tools:layout="@layout/fragment_startpage" >
         <action
-            android:id="@+id/action_gameFragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
+            android:id="@+id/action_startpage_to_level12"
+            app:destination="@id/level12" />
+        <action
+            android:id="@+id/action_startpage_to_about2"
+            app:destination="@id/about2" />
     </fragment>
     <fragment
-        android:id="@+id/resultFragment"
-        android:name="com.mobileapp.lecture17exeranil.ResultFragment"
-        android:label="fragment_result"
-        tools:layout="@layout/fragment_result" >
+        android:id="@+id/level12"
+        android:name="com.mobileapp.lecture17exeranil.level1"
+        android:label="fragment_level1"
+        tools:layout="@layout/fragment_level1" >
         <action
-            android:id="@+id/action_resultFragment_to_gameFragment"
-            app:destination="@id/gameFragment" />
+            android:id="@+id/action_level12_to_level2"
+            app:destination="@id/level2" />
+    </fragment>
+    <fragment
+        android:id="@+id/level2"
+        android:name="com.mobileapp.lecture17exeranil.level2"
+        android:label="fragment_level2"
+        tools:layout="@layout/fragment_level2" >
+        <action
+            android:id="@+id/action_level2_to_finalLevel"
+            app:destination="@id/finalLevel" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalLevel"
+        android:name="com.mobileapp.lecture17exeranil.finalLevel"
+        android:label="fragment_final_level"
+        tools:layout="@layout/fragment_final_level" >
+        <action
+            android:id="@+id/action_finalLevel_to_winGame"
+            app:destination="@id/winGame" />
+    </fragment>
+    <fragment
+        android:id="@+id/winGame"
+        android:name="com.mobileapp.lecture17exeranil.WinGame"
+        android:label="fragment_win_game"
+        tools:layout="@layout/fragment_win_game" >
+        <action
+            android:id="@+id/action_winGame_to_startpage"
+            app:destination="@id/startpage" />
+    </fragment>
+    <fragment
+        android:id="@+id/about2"
+        android:name="com.mobileapp.lecture17exeranil.about"
+        android:label="about" >
+        <action
+            android:id="@+id/action_about2_to_startpage"
+            app:destination="@id/startpage" />
     </fragment>
 </navigation>

@@ -43,65 +43,64 @@ public class GameFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view2) {
-                String guess = Guess.getText().toString();
-                if (guess.equals("h") || guess.equals("H"))
-                {
-                    char1.setText("H");
-                }
-                else if (guess.equals("a") || guess.equals("A"))
-                {
-                    char2.setText("A");
-                    char6.setText("A");
-                }
-                else if (guess.equals("n") || guess.equals("N"))
-                {
-                    char3.setText("N");
-                    char7.setText("N");
-                }
-                else if (guess.equals("g") || guess.equals("G"))
-                {
-                    char4.setText("G");
-                }
-                else if (guess.equals("m") || guess.equals("M"))
-                {
-                    char5.setText("M");
-                }
-
-                if (viewModel.guesses != null)
-                {
-                    int lives = viewModel.guesses.getValue().intValue();
-                    lives--;
-                    viewModel.guesses.setValue(new Integer(lives).intValue());
-                }
-
-                //viewModel.guesses -= 1;
-                //String newGuess = "You have " + String.valueOf(viewModel.guesses.getValue()) + " guesses left";
-                //guessesLeft.setText(newGuess);
-
-                if (viewModel.guesses.getValue() <= 0 )
-                {
-                    Navigation.findNavController(view).navigate(R.id.resultFragment);
-                }
-
-                if (viewModel.checkWin(view))
-                {
-                    Navigation.findNavController(view).navigate(R.id.resultFragment);
-                }
+//                String guess = Guess.getText().toString();
+//                if (guess.equals("h") || guess.equals("H"))
+//                {
+//                    char1.setText("H");
+//                }
+//                else if (guess.equals("a") || guess.equals("A"))
+//                {
+//                    char2.setText("A");
+//                    char6.setText("A");
+//                }
+//                else if (guess.equals("n") || guess.equals("N"))
+//                {
+//                    char3.setText("N");
+//                    char7.setText("N");
+//                }
+//                else if (guess.equals("g") || guess.equals("G"))
+//                {
+//                    char4.setText("G");
+//                }
+//                else if (guess.equals("m") || guess.equals("M"))
+//                {
+//                    char5.setText("M");
+//                }
+//
+//                if (viewModel.guesses != null)
+//                {
+//                    int lives = viewModel.guesses.getValue().intValue();
+//                    lives--;
+//                    viewModel.guesses.setValue(new Integer(lives).intValue());
+//                }
+//
+//                //viewModel.guesses -= 1;
+//                //String newGuess = "You have " + String.valueOf(viewModel.guesses.getValue()) + " guesses left";
+//                //guessesLeft.setText(newGuess);
+//
+//                if (viewModel.guesses.getValue() <= 0 )
+//                {
+//                    Navigation.findNavController(view).navigate(R.id.resultFragment);
+//                }
+//
+//                if (viewModel.checkWin(view))
+//                {
+//                    Navigation.findNavController(view).navigate(R.id.resultFragment);
+//                }
 
             }
         });
-        viewModel.guesses.observe(getViewLifecycleOwner(), new
-                Observer<Integer>() {
-                    @Override
-                    public void onChanged(Integer newValue) {
-                        //TODO: update the TextView related to livesLeft property
-                        if (viewModel.guesses != null)
-                        {
-                            String newGuess = "You have " + String.valueOf(viewModel.guesses.getValue()) + " guesses left";
-                            guessesLeft.setText(newGuess);
-                        }
-                    }
-                    });
+//        viewModel.guesses.observe(getViewLifecycleOwner(), new
+//                Observer<Integer>() {
+//                    @Override
+//                    public void onChanged(Integer newValue) {
+//                        if (viewModel.guesses != null)
+//                        {
+//                            String newGuess = "You have " + String.valueOf(viewModel.guesses.getValue()) + " guesses left";
+//                            guessesLeft.setText(newGuess);
+//                        }
+//                    }
+//                    });
 
 
 
