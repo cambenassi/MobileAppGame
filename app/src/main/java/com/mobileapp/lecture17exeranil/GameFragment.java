@@ -15,9 +15,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.mobileapp.lecture17exeranil.databinding.FragmentFinalLevelBinding;
+import com.mobileapp.lecture17exeranil.databinding.FragmentGameBinding;
+
 
 public class GameFragment extends Fragment {
     private GameViewModel viewModel;
+    private FragmentGameBinding binding;
 
 
     @Override
@@ -27,7 +31,7 @@ public class GameFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_game, container, false);
 
         viewModel = new ViewModelProvider(this).get(GameViewModel.class);
-
+        /*
         TextView char1 = view.findViewById(R.id.char1);
         TextView char2 = view.findViewById(R.id.char2);
         TextView char3 = view.findViewById(R.id.char3);
@@ -39,8 +43,9 @@ public class GameFragment extends Fragment {
         EditText Guess = view.findViewById(R.id.enterGuess);
         Button button = view.findViewById(R.id.button);
         TextView guessesLeft = view.findViewById(R.id.guesses);
-
-        button.setOnClickListener(new View.OnClickListener() {
+         */
+        binding = FragmentGameBinding.inflate(getLayoutInflater());
+        binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view2) {
 //                String guess = Guess.getText().toString();

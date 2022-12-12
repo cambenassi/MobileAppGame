@@ -13,27 +13,35 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.mobileapp.lecture17exeranil.databinding.FragmentLevel1Binding;
+import com.mobileapp.lecture17exeranil.databinding.FragmentLevel2Binding;
 
 public class level2 extends Fragment {
+    private FragmentLevel2Binding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_level2, container, false);
+//        View view = inflater.inflate(R.layout.fragment_level2, container, false);
 
-        Button a = view.findViewById(R.id.a);
-        Button e = view.findViewById(R.id.e);
-        Button m = view.findViewById(R.id.o);
-        Button t = view.findViewById(R.id.n);
-        Button s = view.findViewById(R.id.s);
-        Button l = view.findViewById(R.id.i);
-        Button guess = view.findViewById(R.id.guessBtn);
+        binding = FragmentLevel2Binding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
 
-        TextView word1 = view.findViewById(R.id.word1);
-        TextView word2 = view.findViewById(R.id.word2);
-        TextView word3 = view.findViewById(R.id.word3);
-        TextView word4 = view.findViewById(R.id.word4);
-        TextView currGuessTextView = view.findViewById(R.id.currGuess);
+        Button a = binding.a;
+        Button e = binding.e;
+        Button m = binding.o;
+        Button t = binding.n;
+        Button s = binding.s;
+        Button l = binding.i;
+        Button guess = binding.guessBtn;
+
+        TextView word1 = binding.word1;
+        TextView word2 = binding.word2;
+        TextView word3 = binding.word3;
+        TextView word4 = binding.word4;
+        TextView currGuessTextView = binding.currGuess;
+
+
 
         a.setOnClickListener(new View.OnClickListener() {
             @Override

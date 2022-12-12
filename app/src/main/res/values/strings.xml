@@ -1,16 +1,16 @@
 <resources>
-    <string name="app_name">Lecture17ExerAnil</string>
+    <string name="app_name">Word Hunt</string>
     <string name="guesses">You have 7 guesses left</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcomeTo">Welcome to</string>
-    <string name="wordGuess">Word Guess</string>
+    <string name="wordGuess">Word Hunt</string>
     <string name="start">Start</string>
     <string name="StartOver">Start Over</string>
     <string name="currGuess"></string>
     <string name="about">About</string>
     <string name="main">Main Menu</string>
     <string name="currGuessHint">Current Guess</string>
-    <string name="desc1">This is a game similar to scrabble. The goal of the game is to use the letters in the word bank to create the goal words hidden by the underscores.</string>
+    <string name="desc1">This is a game similar to Scrabble. The goal of the game is to use the letters in the word bank to create the goal words hidden by the underscores.</string>
     <string name="desc2">Although a word may be a valid English word, that does not necessarily mean that it is one of the words in the level.</string>
     <string name="desc3">There are 3 levels, can you beat them all?</string>
     <string name="created">Made by Anil Rao and Cam Benassi.</string>

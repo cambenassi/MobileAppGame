@@ -13,15 +13,16 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.mobileapp.lecture17exeranil.databinding.FragmentAboutBinding;
+import com.mobileapp.lecture17exeranil.databinding.FragmentFinalLevelBinding;
 
 public class finalLevel extends Fragment {
-
+    private FragmentFinalLevelBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_final_level, container, false);
-
+        /*
         Button a = view.findViewById(R.id.a);
         Button e = view.findViewById(R.id.e);
         Button i = view.findViewById(R.id.i);
@@ -41,115 +42,119 @@ public class finalLevel extends Fragment {
         TextView word5 = view.findViewById(R.id.word5);
         TextView currGuessTextView = view.findViewById(R.id.currGuess);
 
-        a.setOnClickListener(new View.OnClickListener() {
+         */
+        binding = FragmentFinalLevelBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+
+        binding.a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String oldGuess = currGuessTextView.getText().toString();
-                currGuessTextView.setText(oldGuess + 'A');
+                String oldGuess = binding.currGuess.getText().toString();
+                binding.currGuess.setText(oldGuess + 'A');
             }
         });
 
-        e.setOnClickListener(new View.OnClickListener() {
+        binding.e.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String oldGuess = currGuessTextView.getText().toString();
-                currGuessTextView.setText(oldGuess + 'E');
+                String oldGuess = binding.currGuess.getText().toString();
+                binding.currGuess.setText(oldGuess + 'E');
             }
         });
 
-        i.setOnClickListener(new View.OnClickListener() {
+        binding.i.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String oldGuess = currGuessTextView.getText().toString();
-                currGuessTextView.setText(oldGuess + 'I');
+                String oldGuess = binding.currGuess.getText().toString();
+                binding.currGuess.setText(oldGuess + 'I');
             }
         });
 
-        o.setOnClickListener(new View.OnClickListener() {
+        binding.o.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String oldGuess = currGuessTextView.getText().toString();
-                currGuessTextView.setText(oldGuess + 'O');
+                String oldGuess = binding.currGuess.getText().toString();
+                binding.currGuess.setText(oldGuess + 'O');
             }
         });
 
-        n.setOnClickListener(new View.OnClickListener() {
+        binding.n.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String oldGuess = currGuessTextView.getText().toString();
-                currGuessTextView.setText(oldGuess + 'N');
+                String oldGuess = binding.currGuess.getText().toString();
+                binding.currGuess.setText(oldGuess + 'N');
             }
         });
 
-        s.setOnClickListener(new View.OnClickListener() {
+        binding.s.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String oldGuess = currGuessTextView.getText().toString();
-                currGuessTextView.setText(oldGuess + 'S');
+                String oldGuess = binding.currGuess.getText().toString();
+                binding.currGuess.setText(oldGuess + 'S');
             }
         });
 
-        h.setOnClickListener(new View.OnClickListener() {
+        binding.h.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String oldGuess = currGuessTextView.getText().toString();
-                currGuessTextView.setText(oldGuess + 'H');
+                String oldGuess = binding.currGuess.getText().toString();
+                binding.currGuess.setText(oldGuess + 'H');
             }
         });
 
-        t.setOnClickListener(new View.OnClickListener() {
+        binding.t.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String oldGuess = currGuessTextView.getText().toString();
-                currGuessTextView.setText(oldGuess + 'T');
+                String oldGuess = binding.currGuess.getText().toString();
+                binding.currGuess.setText(oldGuess + 'T');
             }
         });
 
-        u.setOnClickListener(new View.OnClickListener() {
+        binding.u.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String oldGuess = currGuessTextView.getText().toString();
-                currGuessTextView.setText(oldGuess + 'U');
+                String oldGuess = binding.currGuess.getText().toString();
+                binding.currGuess.setText(oldGuess + 'U');
             }
         });
 
-        r.setOnClickListener(new View.OnClickListener() {
+        binding.r.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String oldGuess = currGuessTextView.getText().toString();
-                currGuessTextView.setText(oldGuess + 'R');
+                String oldGuess = binding.currGuess.getText().toString();
+                binding.currGuess.setText(oldGuess + 'R');
             }
         });
 
 
-        guess.setOnClickListener(new View.OnClickListener() {
+        binding.guessBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String finalGuess = currGuessTextView.getText().toString();
+                String finalGuess = binding.currGuess.getText().toString();
                 if(finalGuess.equals("UNION")){
-                    word1.setText("UNION");
+                    binding.word1.setText("UNION");
                 }
                 else if(finalGuess.equals("SHINE")){
-                    word2.setText("SHINE");
+                   binding.word2.setText("SHINE");
                 }
                 else if(finalGuess.equals("HONOR")){
-                    word3.setText("HONOR");
+                    binding.word3.setText("HONOR");
                 }
                 else if(finalGuess.equals("TONES")){
-                    word4.setText("TONES");
+                    binding.word4.setText("TONES");
                 }
                 else if(finalGuess.equals("OATHS")){
-                    word5.setText("OATHS");
+                    binding.word5.setText("OATHS");
                 }
 
-                currGuessTextView.setText("");
+                binding.currGuess.setText("");
 
 
-                if(word1.getText().toString().equals("UNION") &&
-                        word2.getText().toString().equals("SHINE") &&
-                        word3.getText().toString().equals("HONOR") &&
-                        word4.getText().toString().equals("TONES") &&
-                        word5.getText().toString().equals("OATHS")){
+                if(binding.word1.getText().toString().equals("UNION") &&
+                        binding.word2.getText().toString().equals("SHINE") &&
+                        binding.word3.getText().toString().equals("HONOR") &&
+                        binding.word4.getText().toString().equals("TONES") &&
+                        binding.word5.getText().toString().equals("OATHS")){
 
                     Snackbar snackbar = Snackbar.make(view, "Well done!", Snackbar.LENGTH_INDEFINITE);
                     snackbar.setAction("Continue", new View.OnClickListener() {
