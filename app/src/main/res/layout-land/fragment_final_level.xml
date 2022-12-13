@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".level1">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/level2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/level3"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/word4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wordPlaceholderLvl3"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/word2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wordPlaceholderLvl3"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/word5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wordPlaceholderLvl3"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/word1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wordPlaceholderLvl3"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/word3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wordPlaceholderLvl3"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/n"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/n" />
+
+                <Button
+                    android:id="@+id/s"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s" />
+
+                <Button
+                    android:id="@+id/h"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/h" />
+
+                <Button
+                    android:id="@+id/t"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/t" />
+
+                <Button
+                    android:id="@+id/u"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/u" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/a"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/a" />
+
+                <Button
+                    android:id="@+id/e"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/e" />
+
+                <Button
+                    android:id="@+id/i"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i" />
+
+                <Button
+                    android:id="@+id/r"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/r" />
+
+                <Button
+                    android:id="@+id/o"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/o" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/currGuess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:hint="@string/currGuessHint"
+                android:text="@string/currGuess" />
+
+            <Button
+                android:id="@+id/guessBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/guess" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
