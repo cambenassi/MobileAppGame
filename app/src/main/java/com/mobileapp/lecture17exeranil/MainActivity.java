@@ -15,7 +15,7 @@ generated in a manner consistent with this document, the course academic
 policy on the course website on Blackboard, and the UMass Lowell academic
 code.
 Date: 11/16/2022
-Name: Anil Rao
+Name: Anil Rao and Cameron Benassi
 */
 
 
